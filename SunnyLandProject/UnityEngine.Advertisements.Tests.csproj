@@ -11,10 +11,10 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{D62F1089-590B-7EB5-1DFC-CB957E7F55C7}</ProjectGuid>
+    <ProjectGuid>{4FB3D313-E40C-1212-FEB6-DA743821A07D}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <AssemblyName>Assembly-CSharp</AssemblyName>
+    <AssemblyName>UnityEngine.Advertisements.Tests</AssemblyName>
     <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <BaseDirectory>.</BaseDirectory>
@@ -47,12 +47,16 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\PlayerAudioController.cs" />
-     <Compile Include="Assets\Scripts\TriggerCollection.cs" />
-     <Compile Include="Assets\Scripts\PlayerAudioController.cs" />
-     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
-     <Compile Include="Assets\BoxAudioController.cs" />
-     <Compile Include="Assets\Scripts\CharacterController2D.cs" />
+     <Compile Include="Packages\com.unity.ads\Tests\Runtime\Advertisement\Events\StartEventArgsTests.cs" />
+     <Compile Include="Packages\com.unity.ads\Tests\Runtime\Advertisement\ConfigurationTests.cs" />
+     <Compile Include="Packages\com.unity.ads\Tests\Runtime\Advertisement\Banner\BannerTests.cs" />
+     <Compile Include="Packages\com.unity.ads\Tests\Runtime\Advertisement\Platform\UnsupportedPlatformTests.cs" />
+     <Compile Include="Packages\com.unity.ads\Tests\Runtime\Advertisement\Platform\PlatformTests.cs" />
+     <Compile Include="Packages\com.unity.ads\Tests\Runtime\Advertisement\Platform\EditorPlatformTests.cs" />
+     <Compile Include="Packages\com.unity.ads\Tests\Runtime\Advertisement\MetaDataTests.cs" />
+     <Compile Include="Packages\com.unity.ads\Tests\Runtime\Advertisement\UnityAdsTestListener.cs" />
+     <Compile Include="Packages\com.unity.ads\Tests\Runtime\Advertisement\Utilities\UnityLifecycleManagerTests.cs" />
+     <Compile Include="Packages\com.unity.ads\Tests\Runtime\Advertisement\Events\FinishEventArgsTests.cs" />
  <Reference Include="UnityEngine">
  <HintPath>/Applications/Unity/Hub/Editor/2020.3.34f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
  </Reference>
@@ -275,14 +279,8 @@
  <Reference Include="UnityEditor.UnityConnectModule">
  <HintPath>/Applications/Unity/Hub/Editor/2020.3.34f1/Unity.app/Contents/Managed/UnityEngine/UnityEditor.UnityConnectModule.dll</HintPath>
  </Reference>
- <Reference Include="Unity.Analytics.StandardEvents">
- <HintPath>/Users/victorloperajimenez/Desktop/AA3 Víctor/SunnyLandProject/Library/PackageCache/com.unity.analytics@3.6.12/AnalyticsStandardEvents/Unity.Analytics.StandardEvents.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Analytics.Editor">
- <HintPath>/Users/victorloperajimenez/Desktop/AA3 Víctor/SunnyLandProject/Library/PackageCache/com.unity.analytics@3.6.12/Unity.Analytics.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Analytics.Tracker">
- <HintPath>/Users/victorloperajimenez/Desktop/AA3 Víctor/SunnyLandProject/Library/PackageCache/com.unity.analytics@3.6.12/Unity.Analytics.Tracker.dll</HintPath>
+ <Reference Include="nunit.framework">
+ <HintPath>/Users/victorloperajimenez/Desktop/TareaAA3_SunnyLand/SunnyLandProject/Library/PackageCache/com.unity.ext.nunit@1.0.6/net35/unity-custom/nunit.framework.dll</HintPath>
  </Reference>
  <Reference Include="netstandard">
  <HintPath>/Applications/Unity/Hub/Editor/2020.3.34f1/Unity.app/Contents/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
@@ -629,89 +627,38 @@
  <Reference Include="mscorlib">
  <HintPath>/Applications/Unity/Hub/Editor/2020.3.34f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netfx/mscorlib.dll</HintPath>
  </Reference>
- <Reference Include="Unity.VSCode.Editor">
- <HintPath>/Users/victorloperajimenez/Desktop/AA3 Víctor/SunnyLandProject/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.2D.Tilemap.Editor">
- <HintPath>/Users/victorloperajimenez/Desktop/AA3 Víctor/SunnyLandProject/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
- </Reference>
- <Reference Include="com.unity.multiplayer-hlapi.Editor">
- <HintPath>/Users/victorloperajimenez/Desktop/AA3 Víctor/SunnyLandProject/Library/ScriptAssemblies/com.unity.multiplayer-hlapi.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.TextMeshPro.Editor">
- <HintPath>/Users/victorloperajimenez/Desktop/AA3 Víctor/SunnyLandProject/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.VisualStudio.Editor">
- <HintPath>/Users/victorloperajimenez/Desktop/AA3 Víctor/SunnyLandProject/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Sysroot.Linux_x86_64">
- <HintPath>/Users/victorloperajimenez/Desktop/AA3 Víctor/SunnyLandProject/Library/ScriptAssemblies/Unity.Sysroot.Linux_x86_64.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Timeline">
- <HintPath>/Users/victorloperajimenez/Desktop/AA3 Víctor/SunnyLandProject/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
- </Reference>
- <Reference Include="Unity.TextMeshPro">
- <HintPath>/Users/victorloperajimenez/Desktop/AA3 Víctor/SunnyLandProject/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.Advertisements">
- <HintPath>/Users/victorloperajimenez/Desktop/AA3 Víctor/SunnyLandProject/Library/ScriptAssemblies/UnityEngine.Advertisements.dll</HintPath>
- </Reference>
- <Reference Include="Unity.2D.Sprite.Editor">
- <HintPath>/Users/victorloperajimenez/Desktop/AA3 Víctor/SunnyLandProject/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Toolchain.Linux-x86_64">
- <HintPath>/Users/victorloperajimenez/Desktop/AA3 Víctor/SunnyLandProject/Library/ScriptAssemblies/Unity.Toolchain.Linux-x86_64.dll</HintPath>
- </Reference>
- <Reference Include="UnityEditor.UI">
- <HintPath>/Users/victorloperajimenez/Desktop/AA3 Víctor/SunnyLandProject/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
- </Reference>
- <Reference Include="Unity.PlasticSCM.Editor">
- <HintPath>/Users/victorloperajimenez/Desktop/AA3 Víctor/SunnyLandProject/Library/ScriptAssemblies/Unity.PlasticSCM.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Rider.Editor">
- <HintPath>/Users/victorloperajimenez/Desktop/AA3 Víctor/SunnyLandProject/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Analytics">
- <HintPath>/Users/victorloperajimenez/Desktop/AA3 Víctor/SunnyLandProject/Library/ScriptAssemblies/Analytics.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.SpatialTracking">
- <HintPath>/Users/victorloperajimenez/Desktop/AA3 Víctor/SunnyLandProject/Library/ScriptAssemblies/UnityEngine.SpatialTracking.dll</HintPath>
- </Reference>
- <Reference Include="com.unity.multiplayer-weaver.Editor">
- <HintPath>/Users/victorloperajimenez/Desktop/AA3 Víctor/SunnyLandProject/Library/ScriptAssemblies/com.unity.multiplayer-weaver.Editor.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.UI">
- <HintPath>/Users/victorloperajimenez/Desktop/AA3 Víctor/SunnyLandProject/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Analytics.DataPrivacy">
- <HintPath>/Users/victorloperajimenez/Desktop/AA3 Víctor/SunnyLandProject/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
- </Reference>
- <Reference Include="com.unity.multiplayer-hlapi.Runtime">
- <HintPath>/Users/victorloperajimenez/Desktop/AA3 Víctor/SunnyLandProject/Library/ScriptAssemblies/com.unity.multiplayer-hlapi.Runtime.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.XR.LegacyInputHelpers">
- <HintPath>/Users/victorloperajimenez/Desktop/AA3 Víctor/SunnyLandProject/Library/ScriptAssemblies/UnityEngine.XR.LegacyInputHelpers.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Timeline.Editor">
- <HintPath>/Users/victorloperajimenez/Desktop/AA3 Víctor/SunnyLandProject/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
- </Reference>
- <Reference Include="UnityEditor.XR.LegacyInputHelpers">
- <HintPath>/Users/victorloperajimenez/Desktop/AA3 Víctor/SunnyLandProject/Library/ScriptAssemblies/UnityEditor.XR.LegacyInputHelpers.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.Monetization">
- <HintPath>/Users/victorloperajimenez/Desktop/AA3 Víctor/SunnyLandProject/Library/ScriptAssemblies/UnityEngine.Monetization.dll</HintPath>
- </Reference>
- <Reference Include="UnityEditor.SpatialTracking">
- <HintPath>/Users/victorloperajimenez/Desktop/AA3 Víctor/SunnyLandProject/Library/ScriptAssemblies/UnityEditor.SpatialTracking.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.Advertisements.Editor">
- <HintPath>/Users/victorloperajimenez/Desktop/AA3 Víctor/SunnyLandProject/Library/ScriptAssemblies/UnityEngine.Advertisements.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.SysrootPackage.Editor">
- <HintPath>/Users/victorloperajimenez/Desktop/AA3 Víctor/SunnyLandProject/Library/ScriptAssemblies/Unity.SysrootPackage.Editor.dll</HintPath>
- </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="UnityEngine.Advertisements.csproj">
+      <Project>{83A55654-9FF3-70E5-644B-3F8846CFC279}</Project>
+      <Name>UnityEngine.Advertisements</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="UnityEngine.Monetization.csproj">
+      <Project>{BFA7D059-05C9-D0C0-0F38-9E16FE005282}</Project>
+      <Name>UnityEngine.Monetization</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="UnityEngine.UI.csproj">
+      <Project>{AB247848-2F2B-99D7-48A7-2212F3D7AACC}</Project>
+      <Name>UnityEngine.UI</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="UnityEngine.TestRunner.csproj">
+      <Project>{3297C6F4-CD16-D22F-1EF9-D28EFA0C5385}</Project>
+      <Name>UnityEngine.TestRunner</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="UnityEditor.TestRunner.csproj">
+      <Project>{D9DE8153-7708-4DC9-1258-949E6079110F}</Project>
+      <Name>UnityEditor.TestRunner</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="UnityEditor.UI.csproj">
+      <Project>{08E71EF3-9E8A-78C5-209A-B4CFC2823C57}</Project>
+      <Name>UnityEditor.UI</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
